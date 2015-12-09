@@ -74,7 +74,8 @@ body {
 .reveal h5,
 .reveal h6 {
 	-webkit-hyphens: auto;
-	   -moz-hyphens: auto;
+	/* ugly hyphenization of titles in FF
+	   -moz-hyphens: auto;  */
 	        hyphens: auto;
 
 	word-wrap: break-word;
