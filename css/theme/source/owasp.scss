@@ -1,0 +1,134 @@
+/**
+ * ESET Theme for reveal.js.
+ *
+ * Marc-Etienne M.Léveillé, leveille@eset.com
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+// @font-face {
+// 	font-family: 'League Gothic';
+// 	src: url('../../lib/font/league_gothic-webfont.eot');
+// 	src: url('../../lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+// 		 url('../../lib/font/league_gothic-webfont.woff') format('woff'),
+// 		 url('../../lib/font/league_gothic-webfont.ttf') format('truetype'),
+// 		 url('../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
+// 
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+// Background of the presentation
+$backgroundColor: rgb(234,236,239);
+
+// Primary/body text
+$mainFont: "Fedra Sans Alt Pro", "Calibri", sans-serif;
+$mainFontSize: 36px;
+$mainColor: #222;
+
+// Headings
+$headingMargin: 0 0 20px 0;
+$headingFont: "Fedra Sans Alt Pro", "Calibri", sans-serif;
+$headingColor: #222;
+$headingLineHeight: 1em;
+$headingLetterSpacing: inherit;
+$headingTextTransform: none;
+$headingTextShadow: 0px 0px 3px rgba(0,0,0,0.1);
+$heading1TextShadow: $headingTextShadow;
+
+// Links and actions
+$linkColor: #1C93CF;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: #38676E;
+$selectionColor: #fff;
+
+@mixin corplogo {
+    background: {
+	size: 250px;
+    	repeat: no-repeat;
+    	position: left 3em bottom 2em;
+	}
+}
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+	background: $backgroundColor;
+	@include corplogo;
+}
+
+section[data-background="#125F79"],
+section[data-background="#797620"] {
+    color: #eee;
+}
+
+section[data-background="#125F79"] h2,
+section[data-background="#797620"] h2 {
+    color: #eee;
+    font-weight: bold;
+    background: transparent;
+    border-bottom: 0px !important;
+}
+
+section[data-background="#125F79"] h3 {
+	color: lighten(#125F79, 50%) !important;
+}
+
+section[data-background="#797620"] h3 {
+	color: lighten(#797620, 50%) !important;
+}
+
+.reveal h2 {
+  border-bottom: 2px solid #125f79 !important;
+	font-weight: 500;
+}
+
+.reveal h3 {
+	font-size: 30pt;
+	text-shadow: none;
+	font-weight: 400;
+	color: #777 !important;
+}
+
+@media print {
+	/* This allow the logo to be added to each page */
+	.slides > section {
+		@include corplogo;
+	}
+	
+	body {
+		background-image: none !important;
+	}
+}
+
+.reveal section img {
+	border: none !important;
+}
+
+.oversize2 {
+	zoom: 200%;
+}
+
+.oversize3 {
+	zoom: 300%;
+}
+
+.oversize4, .oversize {
+	zoom: 400%;
+}
+
+.speaker.note {
+    display: none;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
