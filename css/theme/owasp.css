@@ -1,7 +1,10 @@
 @charset "UTF-8";
 /**
- * ESET Theme for reveal.js.
+ * OWASP Theme for reveal.js.
  *
+ * Olivier Bilodeau, obilodeau@gosecure.ca
+ *
+ * Largely based off ESET theme by:
  * Marc-Etienne M.Léveillé, leveille@eset.com
  */
 section[data-background="#125F79"],
