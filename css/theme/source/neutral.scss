@@ -1,0 +1,78 @@
+/**
+ * Black theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+$mainColor: #000;
+
+
+$mainFont: 'Open Sans', sans-serif;
+$linkColor: #e7ad52;
+$linkColorHover: lighten( $linkColor, 20% );
+$headingFont: 'Montserrat', Impact, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.03em;
+$headingTextTransform: none;
+$headingColor: #000;
+$selectionBackgroundColor: #e7ad52;
+$mainFontSize: 30px;
+
+.oversize2 {
+	zoom: 200%;
+}
+
+.oversize3 {
+	zoom: 300%;
+}
+
+.oversize4, .oversize {
+	zoom: 400%;
+}
+
+.speaker.note {
+    display: none;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// overriding theme
+
+// no box, no border on images
+.reveal section img {
+	border: none;
+	background: none;
+	box-shadow: none;
+}
+
+// role=float applies this:
+.reveal section span.right {
+	float: right;
+	margin: 30px 30px;
+}
+
+// inverse text colors for "section" slides
+section[data-background="#000000"] h1,
+section[data-background="#000000"] h2,
+section[data-background="#000000"] h3,
+section[data-background="#000000"] h4,
+section[data-background="#000000"] h5,
+section[data-background="#000000"] h6 {
+    color: #fff;
+}
