@@ -50,7 +50,8 @@ module.exports = function(grunt) {
 					'css/theme/solarized.css': 'css/theme/source/solarized.scss',
 					'css/theme/blood.css': 'css/theme/source/blood.scss',
 					'css/theme/eset.css': 'css/theme/source/eset.scss',
-					'css/theme/owasp.css': 'css/theme/source/owasp.scss'
+					'css/theme/owasp.css': 'css/theme/source/owasp.scss',
+					'css/theme/neutral.css': 'css/theme/source/neutral.scss'
 				}
 			}
 		},
