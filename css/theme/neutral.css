@@ -164,4 +164,16 @@ section[data-background="#000000"] h5,
 section[data-background="#000000"] h6 {
   color: #fff; }
 
+section[data-state="white"] h1,
+section[data-state="white"] h2,
+section[data-state="white"] h3,
+section[data-state="white"] h4,
+section[data-state="white"] h5,
+section[data-state="white"] h6,
+section[data-state="white"] p,
+section[data-state="white"] ul,
+section[data-state="white"] li {
+  color: #fff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
+
 /*# sourceMappingURL=neutral.css.map */
