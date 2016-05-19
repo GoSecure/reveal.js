@@ -14,6 +14,9 @@
 .oversize4, .oversize {
   zoom: 400%; }
 
+.oversize130 {
+  zoom: 130%; }
+
 .speaker.note {
   display: none; }
 
