@@ -136,4 +136,10 @@ section[data-background="#797620"] h3 {
 
 // Theme template ------------------------------
 @import "../template/theme";
+
 // ---------------------------------------------
+// role=float applies this:
+.reveal section span.right {
+	float: right;
+	margin: 30px 30px;
+}
